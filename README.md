@@ -1,6 +1,6 @@
 # Task Manager
 
-A Flutter task management application with local persistence, search, and state management.
+A modern Flutter task management app built with Riverpod and Hive, featuring clean layered architecture, local persistence, real-time search, CRUD operations, reusable widgets, immutable state management, and responsive UI. Demonstrates scalable Flutter development using best practices and modern design patterns.
 
 ## Architecture
 
