@@ -48,3 +48,32 @@ Hive (local storage)
 - **flutter_riverpod** — state management
 - **hive / hive_flutter** — local persistence
 - **uuid** — unique task IDs
+
+## App Download
+- Click to download app [Download](https://drive.google.com/drive/folders/1rwzCm2SB_I7ub5-B5qGastgsuIwgZEJmS)
+
+
+## Installation
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/Marvelousahaiwe/Task-Manager.git
+cd Task-Manager
+```
+
+### 2. Run pub get
+
+```bash
+flutter pub get
+```
+
+### 3. Run the app
+
+```bash
+flutter run
+```
+
+## Developer
+
+- [Marvelous Ahaiwe](https://www.linkedin.com/in/marvelous-ahaiwe-31488b184)

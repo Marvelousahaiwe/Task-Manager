@@ -32,16 +32,17 @@ class _TaskListScreenState extends ConsumerState<TaskListScreen> {
   final _searchController = TextEditingController();
   final _searchFocusNode = FocusNode();
   Timer? _debounceTimer;
-  bool _showSearch = false;
+
 
   // @override
-  // void initState() {
-  //   super.initState();
+  @override
+  void initState() {
+    super.initState();
 
-  //   _searchFocusNode.addListener(() {
-  //     setState(() {});
-  //   });
-  // }
+    _searchFocusNode.addListener(() {
+      setState(() {});
+    });
+  }
 
   @override
   void dispose() {

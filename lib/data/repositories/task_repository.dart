@@ -5,10 +5,20 @@ import '../models/task_model.dart';
 // The box is opened lazily on first access rather than at app start,
 // keeping the initial launch fast. All persistence errors are caught
 // and re-thrown so the provider layer can surface them to the UI.
-class TaskRepository {
-  static final TaskRepository _instance = TaskRepository._();
-  factory TaskRepository() => _instance;
-  TaskRepository._();
+abstract class TaskRepository {
+  factory TaskRepository() => HiveTaskRepository();
+  Future<List<TaskModel>> loadTasks();
+  Future<void> saveTasks(List<TaskModel> tasks);
+}
+
+// Singleton repository that owns the Hive box lifecycle.
+// The box is opened lazily on first access rather than at app start,
+// keeping the initial launch fast. All persistence errors are caught
+// and re-thrown so the provider layer can surface them to the UI.
+class HiveTaskRepository implements TaskRepository {
+  static final HiveTaskRepository _instance = HiveTaskRepository._();
+  factory HiveTaskRepository() => _instance;
+  HiveTaskRepository._();
 
   Box? _box;
 
@@ -20,6 +30,7 @@ class TaskRepository {
     return _box!;
   }
 
+  @override
   Future<List<TaskModel>> loadTasks() async {
     try {
       final box = await _tasksBox;
@@ -34,6 +45,7 @@ class TaskRepository {
     }
   }
 
+  @override
   Future<void> saveTasks(List<TaskModel> tasks) async {
     try {
       final box = await _tasksBox;

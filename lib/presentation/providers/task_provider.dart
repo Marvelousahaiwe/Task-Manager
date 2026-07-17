@@ -180,3 +180,4 @@ final filteredTasksProvider = Provider<List<TaskModel>>((ref) {
         task.description.toLowerCase().contains(query);
   }).toList();
 });
+ 
