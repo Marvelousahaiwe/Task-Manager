@@ -50,7 +50,7 @@ Hive (local storage)
 - **uuid** — unique task IDs
 
 ## App Download
-- Click to download app [Download](https://drive.google.com/drive/folders/1rwzCm2SB_I7ub5-B5qGastgsuIwgZEJmS)
+- Click to download app [Download](https://drive.google.com/drive/folders/1rwzCm2SB_I7ub5-B5qGastgsuIwgZEJm)
 
 
 ## Installation
